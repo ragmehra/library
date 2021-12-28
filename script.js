@@ -13,8 +13,28 @@ function Book(title, author, pages, read) {
 }
 
 function addBook () {
-    let title = document.querySelector("#title");
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let pages = document.querySelector("#pages").value;
+    let read = document.querySelector("#read").checked;
+
+    const newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
+
+    console.log(myLibrary);
+
+    console.log("title: ", title, "\nauthor: ", author, "\npages: ", 
+        pages, "\nread: ", read);
 }
 
-console.log(book.info());
+function displayBooks() {
+    
+}
+
+
+
+
+let addButton = document.querySelector("#addButton");
+addButton.addEventListener("click", addBook);
+
 
