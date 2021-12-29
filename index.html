@@ -10,35 +10,39 @@
 </head>
 <body>
     <main>
-        <h1>Library</h1>
-        <div id="addBookContainer">
-            <div class="row">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title">
-            </div>
+        <header id="header">
+            <h1>Library</h1>
+            
+            <div id="addBookContainer">
+                <div id="hover">
+                    <p>Hover here to add a book!</p>
+                    <div class="row">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
 
-            <div class="row">
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="author">
-            </div>
+                    <div class="row">
+                        <label for="author">Author:</label>
+                        <input required type="text" id="author" name="author">
+                    </div>
 
-            <div class="row">
-                <label for="pages">Number of Pages:</label>
-                <input type="number" id="pages" name="pages">
-            </div>
+                    <div class="row">
+                        <label for="pages">Number of Pages:</label>
+                        <input required type="number" id="pages" name="pages">
+                    </div>
 
-            <div class="row">
-                <label for="read">Have you read it?</label>
-                <input type="checkbox" id="read" name="read">
-            </div>
+                    <div class="row">
+                        <label for="read">Have you read it?</label>
+                        <input type="checkbox" id="read" name="read">
+                    </div>
 
-            <div class="row">
-                <button id="addButton">Add Book</button>
+                    <div class="row">
+                        <button id="addButton">Add Book</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </header>
         <div id="library">
-            <ul>
-            </ul>
         </div>
     </main>
     

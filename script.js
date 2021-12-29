@@ -25,13 +25,30 @@ function addBook () {
 
     console.log("title: ", title, "\nauthor: ", author, "\npages: ", 
         pages, "\nread: ", read);
+        
+    createLibrary();
 }
 
-function displayBooks() {
-    
+function createLibrary() {
+
+    deleteLibrary();
+    let library = document.querySelector("#library");
+    let list = document.createElement("ol");
+    library.appendChild(list);
+    for (let book of myLibrary) {
+        let newBook = document.createElement("li");
+        newBook.textContent = book.info();
+        list.appendChild(newBook);
+    }
 }
 
+function deleteLibrary() {
+    let library = document.querySelector("#library");
+    let list = document.querySelector("#library ol");
+    console.log(library, list);
+    if (list) library.removeChild(list);
 
+}
 
 
 let addButton = document.querySelector("#addButton");
