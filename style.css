@@ -1,6 +1,5 @@
 body {
     margin: 0;
-
 }
 
 main {
@@ -9,6 +8,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 header {
@@ -21,6 +21,7 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 3;
+    font-size: 20px;
 }
 
 h1 {
@@ -49,7 +50,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(128, 128, 128, 0.884);
+    background: rgba(252, 145, 4, 0.726);
     color: white;
 }
 
@@ -63,7 +64,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: height 1s ease;
+    transition: height 0.7s ease;
     height: 0;
     overflow: hidden;
 }
@@ -80,8 +81,13 @@ input {
     padding: 10px;
 }
 
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
 #library {
     display: flex;
+    
     background: inherit;
     margin-top: 170px;
     width: 100%;
@@ -92,10 +98,12 @@ input {
 #library ol {
     display: flex;
     justify-content: center;
+    border: solid black 2px;
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
     padding: 20px;
+    width: 100%;
     
 }
 
@@ -110,6 +118,8 @@ input {
     width: 150px;
     padding: 20px;
     word-wrap: break-word;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.842);
+    letter-spacing: 1px;
 }
 
 .buttonRow {
@@ -123,10 +133,12 @@ input {
 button {
     border: none;
     padding: 10px;
+    box-shadow: 2px 2px 2px black;
 }
 
 button:hover {
     background: rgba(255, 166, 0, 0.829);
+    box-shadow: 2px 2px 2px rgb(97, 64, 3);
 }
 
 button:active {
